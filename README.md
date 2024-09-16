@@ -60,7 +60,8 @@ This will generate optimized static assets in the out folder.
 ## Inspiration
 
 This portfolio was inspired by the work of Dillon Verma and follows a similar layout.
-Components
+
+## Components
 
 The floating dock used in the website was created with Aceternity UI.
 
