@@ -15,11 +15,11 @@ export const ListCard: React.FC<IListCardProps> = ({ title, description, date, a
                 <Avatar src={avatarUrl ?? undefined} name={title} size='sm' />
             </div>
             <div className='w-full'>
-                <h3 className='font-semibold text-sm'>{title}</h3>
-                <p className='text-xs text-slate-600'>{description}</p>
+                <h3 className='font-semibold text-sm dark:text-neutral-300'>{title}</h3>
+                <p className='text-xs text-slate-600 dark:text-neutral-400'>{description}</p>
             </div>
             <div className='pl-4'>
-                <p className='text-xs text-nowrap'>{date}</p>
+                <p className='text-xs text-nowrap dark:text-neutral-400'>{date}</p>
             </div>
         </div>
     );

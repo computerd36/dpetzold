@@ -15,7 +15,7 @@ const links = [
         icon: (
             <IconBrandGithub className="h-full w-full text-slate-900 dark:text-neutral-300" />
         ),
-        href: "#",
+        href: "https://github.com/computerd36",
     },
     {
         title: "Email",

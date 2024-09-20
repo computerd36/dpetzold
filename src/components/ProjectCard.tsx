@@ -31,13 +31,13 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   return (
     <Card className='w-full h-full'>
       <CardHeader>
-        <Image src={project.thumbnailUrl} alt={"Image of " + project.title} />
+        <Image src={project.thumbnailUrl} alt={"Image of " + project.title} className='rounded-md'/>
       </CardHeader>
       <Divider />
       <CardBody>
-        <h3 className='text-xl font-bold'>{project.title}</h3>
-        <p className='text-sm font-semibold mb-2'>{project.duration}</p>
-        <p className='text-xs text-slate-600'>{project.description}</p>
+        <h3 className='text-xl text-slate-900 dark:text-neutral-300 font-bold'>{project.title}</h3>
+        <p className='text-sm text-slate-900 dark:text-neutral-400 font-semibold mb-2'>{project.duration}</p>
+        <p className='text-xs text-slate-600 dark:text-neutral-400 mb-auto'>{project.description}</p>
         <div className='flex flex-row h-auto pt-2 gap-1 flex-wrap'>
           {project.technologies.map((technology, index) => (
             <TechChip key={index + technology} title={technology} />
@@ -49,10 +49,11 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
           {project.links?.map((link, index) => (
             <Button
               key={index + link.url}
-              variant='flat'
+              variant='bordered'
               startContent={getIcon(link.type)}
               onPress={() => openLink(link.url)}
               aria-label={"Link to " + link.title}
+              className='text-slate-900 dark:text-neutral-300'
             >
               {link.title}
             </Button>

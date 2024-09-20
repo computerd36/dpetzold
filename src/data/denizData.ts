@@ -1,4 +1,4 @@
-import { Project } from "../types";
+import { Project, Skill } from "../types";
 
 export const workExperience = [
     {
@@ -30,20 +30,63 @@ export const education = [
     }
 ];
 
-export const skills = [
-    "TypeScript",
-    "Java",
-    "React",
-    "Angular",
-    "Node",
-    "Express",
-    "Spring Boot",
-    "MongoDB",
-    "PostgreSQL",
-    "Tailwind",
-    "Docker",
-    "Mapbox",
-    "Firefox Addon Development",
+export const skills: Skill[] = [
+    {
+        title: "TypeScript",
+        type: "language"
+    },
+    {
+        title: "Java",
+        type: "language"
+    },
+    {
+        title: "Python",
+        type: "language"
+    },
+    {
+        title: "React",
+        type: "framework"
+    },
+    {
+        title: "Angular",
+        type: "framework"
+    },
+    {
+        title: "Node",
+        type: "framework"
+    },
+    {
+        title: "Express",
+        type: "framework"
+    },
+    {
+        title: "Spring Boot",
+        type: "framework"
+    },
+    {
+        title: "MongoDB",
+        type: "technology"
+    },
+    {
+        title: "PostgreSQL",
+        type: "technology"
+    },
+    {
+        title: "Tailwind",
+        type: "framework"
+    },
+    {
+        title: "Docker",
+        type: "technology"
+    },
+    {
+        title: "Mapbox",
+        type: "technology"
+    },
+    {
+        title: "Firefox Addon Development",
+        type: "technology"
+    }
 ];
 
 export const projects: Project[] = [

@@ -12,6 +12,12 @@ export type Education = {
     avatarUrl?: string;
 }
 
+export type Skill = {
+    title: string;
+    type: "language" | "framework" | "technology" | "service";
+}
+
+
 export type Project = {
     title: string;
     duration: string;
