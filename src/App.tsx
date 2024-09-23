@@ -3,7 +3,9 @@ import { useLocalStorage } from 'usehooks-ts'
 
 // Pages
 import { PageLanding } from "./routes/PageLanding";
-import { PageImprint } from "./routes/PageImprint";
+import { PageLegalDisclosure } from "./routes/PageLegalDisclosure";
+
+// Components
 import { DarkModeSwitch } from "./components/DarkModeSwitch";
 import { DockComponent } from "./components/DockComponent";
 
@@ -21,7 +23,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<PageLanding />} />
-        <Route path="/imprint" element={<PageImprint />} />
+        <Route path="/legal" element={<PageLegalDisclosure />} />
       </Routes>
     </main>
   )

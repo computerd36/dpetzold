@@ -152,7 +152,7 @@ export function PageLanding() {
 
             <Spacer y={20} />
 
-            <p className="text-slate-600 text-sm dark:text-neutral-400 pb-2 flex items-center justify-between"><span>© Deniz Petzold {new Date().getFullYear()}</span><Link to={'/imprint'} aria-label="Link to imprint" className="text-blue-600 dark:text-blue-400 font-semibold">Imprint</Link></p>
+            <p className="text-slate-600 text-sm dark:text-neutral-400 pb-2 flex items-center justify-between"><span>© Deniz Petzold {new Date().getFullYear()}</span><Link to={'/legal'} aria-label="Link to legal notice" className="text-blue-600 dark:text-blue-400 font-semibold">Legal</Link></p>
         </div >
     );
 }
