@@ -7,6 +7,7 @@ import { SkillChip } from "../components/SkillChip";
 import { ProjectCard } from "../components/ProjectCard";
 import { motion } from "framer-motion";
 import { DockComponent } from "../components/DockComponent";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
 
 
 
@@ -15,6 +16,8 @@ export function PageLanding() {
     return (
         <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] py-24 relative">
             <DockComponent />
+
+            <DarkModeSwitch />
 
             <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -81,22 +84,22 @@ export function PageLanding() {
             >
                 <h2 className="text-xl font-bold text-slate-900 dark:text-neutral-300 mb-1">Skills</h2>
                 <div className="flex flex-col gap-2">
-                    <div className="flex w-full gap-1 flex-wrap">
+                    <div className="flex w-full gap-1 flex-wrap mb-1">
                         {skills.filter(skill => skill.type === "language").map((skill, index) => (
                             <SkillChip key={index + skill.title} title={skill.title} />
                         ))}
                     </div>
-                    <div className="flex w-full gap-1 flex-wrap">
+                    <div className="flex w-full gap-1 flex-wrap mb-1">
                         {skills.filter(skill => skill.type === "framework").map((skill, index) => (
                             <SkillChip key={index + skill.title} title={skill.title} />
                         ))}
                     </div>
-                    <div className="flex w-full gap-1 flex-wrap">
+                    <div className="flex w-full gap-1 flex-wrap mb-1">
                         {skills.filter(skill => skill.type === "technology").map((skill, index) => (
                             <SkillChip key={index + skill.title} title={skill.title} />
                         ))}
                     </div>
-                    <div className="flex w-full gap-1 flex-wrap">
+                    <div className="flex w-full gap-1 flex-wrap mb-1">
                         {skills.filter(skill => skill.type === "service").map((skill, index) => (
                             <SkillChip key={index + skill.title} title={skill.title} />
                         ))}
@@ -104,7 +107,7 @@ export function PageLanding() {
                 </div>
             </motion.div>
 
-            <Spacer y={14} />
+            <Spacer y={8} />
 
             <motion.div
                 initial={{ opacity: 0 }}

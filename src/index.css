@@ -2,6 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
+/* Light mode */
+html, body {
   background-color: #f8fafc;
+  min-height: 100%; 
+  overscroll-behavior: none;
+}
+
+/* Dark mode */
+.dark html, .dark body {
+  background-color: #1a202c; 
 }
