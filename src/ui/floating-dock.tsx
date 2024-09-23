@@ -85,7 +85,7 @@ const FloatingDockMobile = ({
                 onClick={() => setOpen(!open)}
                 className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/50 dark:bg-neutral-800 flex items-center justify-center border border-slate-600"
             >
-                <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
+                <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" aria-label="Open Dock" />
             </button>
         </div >
     );
