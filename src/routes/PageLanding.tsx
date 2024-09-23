@@ -142,7 +142,7 @@ export function PageLanding() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.8, duration: 1 }}
+                transition={{ delay: 2, duration: 1 }}
             >
                 <h2 className="text-4xl font-bold text-slate-900 dark:text-neutral-300 text-center mb-1">Contact</h2>
                 <p className="text-xl text-slate-600 dark:text-neutral-400 text-center">
