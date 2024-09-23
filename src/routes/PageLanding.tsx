@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 export function PageLanding() {
 
     return (
-        <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] pt-24 relative">
+        <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] pt-12 md:pt-24 relative">
 
             <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -152,7 +152,7 @@ export function PageLanding() {
 
             <Spacer y={20} />
 
-            <p className="text-slate-600 dark:text-neutral-400 pb-2">© Deniz Petzold {new Date().getFullYear()} - <Link to={'/imprint'} aria-label="Link to imprint" className="text-blue-600 dark:text-blue-400 font-semibold">Imprint</Link>.</p>
+            <p className="text-slate-600 text-sm dark:text-neutral-400 pb-2 flex items-center justify-between"><span>© Deniz Petzold {new Date().getFullYear()}</span><Link to={'/imprint'} aria-label="Link to imprint" className="text-blue-600 dark:text-blue-400 font-semibold">Imprint</Link></p>
         </div >
     );
 }

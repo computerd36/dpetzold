@@ -5,7 +5,7 @@
  **/
 
 import { cn } from "../../lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import { IconLayoutNavbarCollapse, IconLayoutNavbarExpand } from "@tabler/icons-react";
 import {
     AnimatePresence,
     MotionValue,
@@ -71,7 +71,7 @@ const FloatingDockMobile = ({
                                     to={item.href}
                                     target={item.href.startsWith("http") ? "_blank" : "_self"}
                                     key={item.title}
-                                    className="h-14 w-14 rounded-full bg-slate-50 dark:bg-neutral-800 flex items-center justify-center border border-slate-600"
+                                    className="h-14 w-14 rounded-full bg-slate-50 dark:bg-neutral-900 flex items-center justify-center border border-slate-600"
                                     aria-label={`Link to ${item.title}`}
                                 >
                                     <div className="h-8 w-8">{item.icon}</div>
@@ -83,9 +83,15 @@ const FloatingDockMobile = ({
             </AnimatePresence>
             <button
                 onClick={() => setOpen(!open)}
-                className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/50 dark:bg-neutral-800 flex items-center justify-center border border-slate-600"
+                className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/50 dark:bg-neutral-900 flex items-center justify-center border border-slate-600"
+                aria-label="Open Dock"
             >
-                <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" aria-label="Open Dock" />
+                {
+                    open ?
+                        <IconLayoutNavbarExpand className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
+                        :
+                        <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
+                }
             </button>
         </div >
     );

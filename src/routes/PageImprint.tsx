@@ -6,7 +6,7 @@ export function PageImprint() {
         <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] py-24 relative">
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-neutral-200 flex">Impress</h1>
             <Spacer y={8} />
-            <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-400 text-left">
+            <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-400 text-left font-semibold">
                 Angaben gemäß § 5 DDG
             </p>
             <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-400 text-left">
