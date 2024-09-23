@@ -1,15 +1,15 @@
 import { Project, Skill } from "../types";
 
 //Image imports 
-import egenusScreenshot from "../assets/project-screenshots/egenus-screenshot.png";
-import rootrackScreenshot from "../assets/project-screenshots/rootrack-screenshot.png";
-import dbfahrtrichtungScreenshot from "../assets/project-screenshots/dbfahrtrichtung-screenshot.png";
-import andreagottiScreenshot from "../assets/project-screenshots/andreagotti-screenshot.png";
+import egenusScreenshot from "../assets/project-screenshots/egenus-screenshot.webp";
+import rootrackScreenshot from "../assets/project-screenshots/rootrack-screenshot.webp";
+import dbfahrtrichtungScreenshot from "../assets/project-screenshots/dbfahrtrichtung-screenshot.webp";
+import andreagottiScreenshot from "../assets/project-screenshots/andreagotti-screenshot.webp";
 
-import capgeminiLogo from "../assets/logos/capgemini-logo.png";
-import catenamediaLogo from "../assets/logos/catenamedia-logo.png";
-import oszimtLogo from "../assets/logos/oszimt-logo.png";
-import bhtLogo from "../assets/logos/bht-logo.png";
+import capgeminiLogo from "../assets/logos/capgemini-logo.webp";
+import catenamediaLogo from "../assets/logos/catenamedia-logo.webp";
+import oszimtLogo from "../assets/logos/oszimt-logo.webp";
+import bhtLogo from "../assets/logos/bht-logo.webp";
 
 export const workExperience = [
     {
