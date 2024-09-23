@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   return (
     <Card className='w-full h-full'>
       <CardHeader>
-        <Image src={project.thumbnailUrl} alt={"Image of " + project.title} className='rounded-md'/>
+        <Image src={project.thumbnail} alt={"Image of " + project.title} className='rounded-md' />
       </CardHeader>
       <Divider />
       <CardBody>

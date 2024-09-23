@@ -1,5 +1,5 @@
 import { useLocalStorage } from 'usehooks-ts'
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 export function DarkModeSwitch() {
 
@@ -11,10 +11,17 @@ export function DarkModeSwitch() {
 
     return (
         <button
-            className="w-10 h-10 fixed top-5 right-5 flex items-center justify-center rounded-3xl border bg-slate-50 dark:bg-neutral-900"
+            className="w-10 h-10 fixed top-5 right-5 z-20 flex items-center justify-center rounded-3xl border bg-slate-50 dark:bg-neutral-900"
             onClick={toggle}
+            aria-label={storedDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
-            <MdDarkMode className="text-neutral-900 dark:text-slate-50" />
+            {
+                storedDarkMode ? (
+                    <MdLightMode className='text-slate-50 hover:scale-110 transition-all' />
+                ) : (
+                    <MdDarkMode className='text-neutral-900 hover:scale-110 transition-all' />
+                )
+            }
         </button>
     );
 }

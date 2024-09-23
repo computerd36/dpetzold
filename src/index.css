@@ -2,14 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* disable scrollbar on all browsers */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 /* Light mode */
-html, body {
+html,
+body {
   background-color: #f8fafc;
-  min-height: 100%; 
+  min-height: 100%;
   overscroll-behavior: none;
 }
 
 /* Dark mode */
-.dark html, .dark body {
-  background-color: #1a202c; 
+.dark html,
+.dark body {
+  background-color: #1a202c;
 }

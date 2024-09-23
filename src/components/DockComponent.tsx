@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FloatingDock } from "../ui/floating-dock";
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconHome, IconMail } from "@tabler/icons-react";
+import { useLocation } from "react-router-dom";
 
 const links = [
     {
@@ -28,16 +29,33 @@ const links = [
 
 
 export function DockComponent() {
+    const location = useLocation();
+
+
     return (
         <div className="fixed bottom-4 z-50 left-1/2 transform -translate-x-1/2">
             <motion.div
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
-                transition={{ delay: 2, duration: 0.5, type: "spring", stiffness: 120 }}
+                transition={{ delay: 0.5, duration: 0.5, type: "spring", stiffness: 120 }}
             >
-                <FloatingDock
-                    items={links}
-                />
+                {location.pathname === "/" ?
+                    <FloatingDock
+                        items={links}
+                    /> :
+                    <FloatingDock
+                        items={[
+                            {
+                                title: "Home",
+                                icon: (
+                                    <IconHome className="h-full w-full text-slate-900 dark:text-neutral-300" />
+                                ),
+                                href: "/",
+                            },
+                            ...links
+                        ]}
+                    />
+                }
             </motion.div>
         </div>
     );

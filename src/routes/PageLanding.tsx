@@ -6,18 +6,14 @@ import { ListCard } from "../components/ListCard";
 import { SkillChip } from "../components/SkillChip";
 import { ProjectCard } from "../components/ProjectCard";
 import { motion } from "framer-motion";
-import { DockComponent } from "../components/DockComponent";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { Link } from "react-router-dom";
 
 
 
 export function PageLanding() {
 
     return (
-        <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] py-24 relative">
-            <DockComponent />
-
-            <DarkModeSwitch />
+        <div className="w-full min-h-dvh bg-slate-50 dark:bg-neutral-900 px-8 md:px-[10%] xl:px-[25%] 2xl:px-[30%] pt-24 relative">
 
             <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -58,7 +54,7 @@ export function PageLanding() {
             >
                 <h2 className="text-xl font-bold text-slate-900 dark:text-neutral-300 mb-1">Work Experience</h2>
                 {workExperience.map((item, index) => (
-                    <ListCard key={index + item.title} title={item.title} description={item.description} date={item.date} avatarUrl={item.avatarUrl} />
+                    <ListCard key={index + item.title} title={item.title} description={item.description} date={item.date} avatarUrl={item.avatar} />
                 ))}
             </motion.div>
 
@@ -71,7 +67,7 @@ export function PageLanding() {
             >
                 <h2 className="text-xl font-bold text-slate-900 dark:text-neutral-300 mb-1">Education</h2>
                 {education.map((item, index) => (
-                    <ListCard key={index + item.title} title={item.title} description={item.description} date={item.date} avatarUrl={item.avatarUrl} />
+                    <ListCard key={index + item.title} title={item.title} description={item.description} date={item.date} avatarUrl={item.avatar} />
                 ))}
             </motion.div>
 
@@ -150,11 +146,13 @@ export function PageLanding() {
             >
                 <h2 className="text-4xl font-bold text-slate-900 dark:text-neutral-300 text-center mb-1">Contact</h2>
                 <p className="text-xl text-slate-600 dark:text-neutral-400 text-center">
-                    Would you like to talk to me? Just <a href="mailto:deniz.petzold@gmail.com" target="_blank" className="text-blue-600 font-semibold">send me an email</a> or <a href="https://www.linkedin.com/in/dpetzold/" target="_blank" className="text-blue-600 font-semibold">contact me on LinkedIn</a> and I will get back to you as soon as possible.
+                    Would you like to talk to me? Just <a href="mailto:deniz.petzold@gmail.com" target="_blank" className="text-blue-600 dark:text-blue-400 font-semibold">send me an email</a> or <a href="https://www.linkedin.com/in/dpetzold/" target="_blank" className="text-blue-600 dark:text-blue-400 font-semibold">contact me on LinkedIn</a> and I will get back to you as soon as possible.
                 </p>
             </motion.div>
 
-            <Spacer y={8} />
+            <Spacer y={20} />
+
+            <p className="text-slate-600 dark:text-neutral-400 pb-2">© Deniz Petzold {new Date().getFullYear()} - <Link to={'/imprint'} aria-label="Link to imprint" className="text-blue-600 dark:text-blue-400 font-semibold">Imprint</Link>.</p>
         </div >
     );
 }

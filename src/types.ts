@@ -2,14 +2,14 @@ export type WorkExperience = {
     title: string;
     description: string;
     date: string;
-    avatarUrl?: string;
+    avatar?: string;
 }
 
 export type Education = {
     title: string;
     description: string;
     date: string;
-    avatarUrl?: string;
+    avatar?: string;
 }
 
 export type Skill = {
@@ -23,7 +23,7 @@ export type Project = {
     duration: string;
     description: string;
     technologies: string[];
-    thumbnailUrl: string;
+    thumbnail: string;
     links?: {
         url: string;
         title: string;

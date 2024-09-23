@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow search engines from indexing the Impress page
+Disallow: /impress
+
+Sitemap: https://dpetzold.dev/sitemap.xml

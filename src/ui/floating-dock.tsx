@@ -69,9 +69,10 @@ const FloatingDockMobile = ({
                             >
                                 <Link
                                     to={item.href}
-                                    target="_blank"
+                                    target={item.href.startsWith("http") ? "_blank" : "_self"}
                                     key={item.title}
                                     className="h-14 w-14 rounded-full bg-slate-50 dark:bg-neutral-800 flex items-center justify-center border border-slate-600"
+                                    aria-label={`Link to ${item.title}`}
                                 >
                                     <div className="h-8 w-8">{item.icon}</div>
                                 </Link>
@@ -86,7 +87,7 @@ const FloatingDockMobile = ({
             >
                 <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
             </button>
-        </div>
+        </div >
     );
 };
 
@@ -103,7 +104,7 @@ const FloatingDockDesktop = ({
             onMouseMove={(e) => mouseX.set(e.pageX)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
-                "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl backdrop-blur-md bg-dark/70 dark:bg-neutral-900 px-4 pb-3 border border-slate-600",
+                "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl backdrop-blur-md bg-dark/70 dark:light/30 px-4 pb-3 border border-slate-600",
                 className
             )}
         >
@@ -168,7 +169,11 @@ function IconContainer({
     const [hovered, setHovered] = useState(false);
 
     return (
-        <Link to={href} target="_blank">
+        <Link
+            to={href}
+            target={href.startsWith("http") ? "_blank" : "_self"}
+            aria-label={`Link to ${title}`}
+        >
             <motion.div
                 ref={ref}
                 style={{ width, height }}

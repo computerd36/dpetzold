@@ -3,7 +3,9 @@ import { useLocalStorage } from 'usehooks-ts'
 
 // Pages
 import { PageLanding } from "./routes/PageLanding";
-import { PageImpress } from "./routes/PageImpress";
+import { PageImprint } from "./routes/PageImprint";
+import { DarkModeSwitch } from "./components/DarkModeSwitch";
+import { DockComponent } from "./components/DockComponent";
 
 
 
@@ -14,9 +16,12 @@ export default function App() {
 
   return (
     <main className={storedDarkMode ? 'dark' : 'light'}>
+      <DarkModeSwitch />
+      <DockComponent />
+
       <Routes>
         <Route path="/" element={<PageLanding />} />
-        <Route path="/impress" element={<PageImpress />} />
+        <Route path="/imprint" element={<PageImprint />} />
       </Routes>
     </main>
   )
