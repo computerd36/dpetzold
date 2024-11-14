@@ -3,7 +3,7 @@ import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 export function DarkModeSwitch() {
 
-    const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', false);
+    const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', true);
 
     const toggle = () => {
         setStoredDarkMode(!storedDarkMode);
