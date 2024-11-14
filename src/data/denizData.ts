@@ -87,6 +87,10 @@ export const skills: Skill[] = [
         type: "framework"
     },
     {
+        title: "Framer Motion",
+        type: "framework"
+    },
+    {
         title: "Docker",
         type: "technology"
     },
@@ -122,9 +126,9 @@ export const projects: Project[] = [
     },
     {
         title: "Rootrack",
-        duration: "Jun 2024 - Sep 2024",
+        duration: "Jun 2024 - Nov 2024",
         description: "Designed and developed a web app that allows users of the gambling site Roobet to get accurate statistics and insights into their gambling behavior, their losses and winnings as well as special incidents as the platform itself does not offer such functionality.",
-        technologies: ["Typescript", "React", "Recharts", "Tailwind", "Flowbite"],
+        technologies: ["Typescript", "React", "Recharts", "Tailwind", "Framer Motion"],
         thumbnail: rootrackScreenshot,
         links: [
             {
