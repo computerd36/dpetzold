@@ -13,7 +13,7 @@ import { DockComponent } from "./components/DockComponent";
 
 export default function App() {
 
-  const [storedDarkMode] = useLocalStorage('darkMode', false);
+  const [storedDarkMode] = useLocalStorage('darkMode', true);
 
 
   return (
