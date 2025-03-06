@@ -23,8 +23,8 @@ export function PageLanding() {
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-neutral-200 flex gap-4">
                     <span>Hey, I'm Deniz!</span>
                     <motion.div
-                        animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }}
-                        transition={{ duration: 0.5, repeat: Infinity, delay: 2, repeatDelay: 2, type: "tween" }}
+                        animate={{ rotate: [0, 15, -15, 15, -15, 0], scale: [1, 1.1, 1.1, 1.1, 1.1, 1] }}
+                        transition={{ duration: 1, repeat: Infinity, delay: 2, repeatDelay: 2, type: "tween" }}
                     >👋</motion.div>
                 </h1>
                 <p className="text-md md:text-xl text-slate-800 dark:text-neutral-300 mt-4">

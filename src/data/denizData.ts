@@ -1,11 +1,13 @@
 import { Project, Skill } from "../types";
 
-//Image imports 
+//Screenshot imports 
 import egenusScreenshot from "../assets/project-screenshots/egenus-screenshot.webp";
 import rootrackScreenshot from "../assets/project-screenshots/rootrack-screenshot.webp";
 import dbfahrtrichtungScreenshot from "../assets/project-screenshots/dbfahrtrichtung-screenshot.webp";
 import andreagottiScreenshot from "../assets/project-screenshots/andreagotti-screenshot.webp";
+import blattwerkScreenshot from "../assets/project-screenshots/blattwerk-screenshot.webp";
 
+//Logo imports
 import capgeminiLogo from "../assets/logos/capgemini-logo.webp";
 import catenamediaLogo from "../assets/logos/catenamedia-logo.webp";
 import oszimtLogo from "../assets/logos/oszimt-logo.webp";
@@ -13,9 +15,14 @@ import bhtLogo from "../assets/logos/bht-logo.webp";
 
 export const workExperience = [
     {
+        title: "RLE Mobility",
+        description: "Test Driver (Working Student)",
+        date: "Nov 24 - Jan 25"
+    },
+    {
         title: "Capgemini",
         description: "Software Engineering (Working Student)",
-        date: "Apr 24 - now",
+        date: "Apr 24 - Nov 24",
         avatar: capgeminiLogo
     },
     {
@@ -56,6 +63,14 @@ export const skills: Skill[] = [
     },
     {
         title: "React",
+        type: "framework"
+    },
+    {
+        title: "Jest",
+        type: "framework"
+    },
+    {
+        title: "Vitest",
         type: "framework"
     },
     {
@@ -140,6 +155,20 @@ export const projects: Project[] = [
                 url: "https://github.com/computerd36/rootrack",
                 title: "Github",
                 type: "github"
+            }
+        ]
+    },
+    {
+        title: "Blattwerk e.V.",
+        duration: "Oct 2024 - Jan 2025",
+        description: "Conceptualized, designed, and developed a full-stack website for Berlin-based cannabis social club Blattwerk e.V., integrating a user-friendly sign-up flow, a custom backend, and intricate Framer Motion animations for a dynamic, engaging experience.",
+        technologies: ["Typescript", "React", "Tailwind", "Framer Motion", "Node", "Express", "Airtable"],
+        thumbnail: blattwerkScreenshot,
+        links: [
+            {
+                url: "https://blattwerkev.de",
+                title: "Website",
+                type: "website"
             }
         ]
     },

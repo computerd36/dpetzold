@@ -36,8 +36,8 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       <Divider />
       <CardBody>
         <h3 className='text-xl text-slate-900 dark:text-neutral-300 font-bold'>{project.title}</h3>
-        <p className='text-sm text-slate-900 dark:text-neutral-400 font-semibold mb-2'>{project.duration}</p>
-        <p className='text-xs text-slate-600 dark:text-neutral-400 mb-auto'>{project.description}</p>
+        <p className='text-xs text-slate-900 dark:text-neutral-400 font-semibold mb-2'>{project.duration}</p>
+        <p className='text-xs text-slate-600 dark:text-neutral-300 mb-auto'>{project.description}</p>
         <div className='flex flex-row h-auto pt-2 gap-1 flex-wrap'>
           {project.technologies.map((technology, index) => (
             <TechChip key={index + technology} title={technology} />
