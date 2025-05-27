@@ -12,8 +12,15 @@ import capgeminiLogo from "../assets/logos/capgemini-logo.webp";
 import catenamediaLogo from "../assets/logos/catenamedia-logo.webp";
 import oszimtLogo from "../assets/logos/oszimt-logo.webp";
 import bhtLogo from "../assets/logos/bht-logo.webp";
+import egenusLogo from "../assets/logos/egenus-logo.webp";
 
 export const workExperience = [
+    {
+        title: "egenus e.V.",
+        description: "Co-Founder & Developer",
+        date: "Mar 24 - now",
+        avatar: egenusLogo
+    },
     {
         title: "RLE Mobility",
         description: "Test Driver (Working Student)",
@@ -35,11 +42,11 @@ export const workExperience = [
 
 export const education = [
     {
-        title: "Berlin University of Applied Sciences and Technology",
-        description: "Media Informatics (B.Sc.)",
+        title: "Berlin University of Applied Sciences",
+        description: "Media Computer Science (B.Sc.)",
         date: "2021 - now",
         avatar: bhtLogo
-    },
+    },  
     {
         title: "OSZ IMT",
         description: "Information Technology Assistant",
@@ -111,6 +118,14 @@ export const skills: Skill[] = [
     },
     {
         title: "Mapbox",
+        type: "technology"
+    },
+    {
+        title: "PostHog",
+        type: "technology"
+    },
+    {
+        title: "Pushsafer",
         type: "technology"
     },
     {

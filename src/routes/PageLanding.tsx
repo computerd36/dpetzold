@@ -41,7 +41,7 @@ export function PageLanding() {
             >
                 <h2 className="text-xl font-bold text-slate-900 dark:text-neutral-300 mb-1">About</h2>
                 <p className="text-sm text-slate-600 dark:text-neutral-400">
-                    I study media informatics at the BHT in Berlin and have been working intensively with web development since 2018. Big fan of open source software and love working on projects that make the world a little better. I would like to present my experience, skills and projects below.
+                    I am studying Media Computer Science at Berlin University of Applied Sciences (BHT) and have been working intensively with web development since 2018. I am a big fan of open-source software and love working on projects that make the world a better place. You can find details of my experience, skills and projects below.
                 </p>
             </motion.div>
 
@@ -153,6 +153,7 @@ export function PageLanding() {
             <Spacer y={20} />
 
             <p className="text-slate-600 text-sm dark:text-neutral-400 pb-2 flex items-center justify-between"><span>© Deniz Petzold {new Date().getFullYear()}</span><Link to={'/legal'} aria-label="Link to legal notice" className="text-blue-600 dark:text-blue-400 font-semibold">Legal</Link></p>
+            <Spacer y={10} />
         </div >
     );
 }
