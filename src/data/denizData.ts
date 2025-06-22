@@ -46,7 +46,7 @@ export const education = [
         description: "Media Computer Science (B.Sc.)",
         date: "2021 - now",
         avatar: bhtLogo
-    },  
+    },
     {
         title: "OSZ IMT",
         description: "Information Technology Assistant",
@@ -137,10 +137,11 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
     {
         title: "egenus",
-        duration: "Apr 2024 - now",
+        duration: "Mar 2024 - now",
         description: "Designed and developed a social platform to promote the digital participation of people in need. Our application helps people in difficult life situations to access support services more easily and enables social institutions to better present and manage their services.",
-        technologies: ["Typescript", "React", "Tailwind", "NextUI", "Node", "Express", "MongoDB", "Mapbox"],
+        technologies: ["Typescript", "React", "Tailwind", "HeroUI", "Node", "Express", "MongoDB", "Mapbox"],
         thumbnail: egenusScreenshot,
+        thumbnailAlt: "Screenshot showing the landing page of the egenus web app, showing the desktop version with the sidebar on the left with multiple selectable services like 'Overnight' or 'Food' and a map on the right with markers for the services",
         links: [
             {
                 url: "https://egenus.org",
@@ -160,6 +161,7 @@ export const projects: Project[] = [
         description: "Designed and developed a web app that allows users of the gambling site Roobet to get accurate statistics and insights into their gambling behavior, their losses and winnings as well as special incidents as the platform itself does not offer such functionality.",
         technologies: ["Typescript", "React", "Recharts", "Tailwind", "Framer Motion"],
         thumbnail: rootrackScreenshot,
+        thumbnailAlt: "Screenshot showing the landing page of the Rootrack web app, featuring a dark theme with a animated graph and the title 'Track Your Betting Journey with Ease'",
         links: [
             {
                 url: "https://rootrack.me",
@@ -179,6 +181,7 @@ export const projects: Project[] = [
         description: "Conceptualized, designed, and developed a full-stack website for Berlin-based cannabis social club Blattwerk e.V., integrating a user-friendly sign-up flow, a custom backend, and intricate Framer Motion animations for a dynamic, engaging experience.",
         technologies: ["Typescript", "React", "Tailwind", "Framer Motion", "Node", "Express", "Airtable"],
         thumbnail: blattwerkScreenshot,
+        thumbnailAlt: "Screenshot showing the landing page of the Blattwerk e.V. website, featuring a painting-styled background with cannabis plants animating like they bend in the wind",
         links: [
             {
                 url: "https://blattwerkev.de",
@@ -193,6 +196,7 @@ export const projects: Project[] = [
         description: "DB Fahrtrichtung is a Firefox addon that extends the seat reservation process on bahn.de, the website of the national railway company of Germany, with a direct link to the carriage routing on fernbahn.de, allowing users to easily determine the direction of travel of their train.",
         technologies: ["Javascript", "Firefox Addon Development"],
         thumbnail: dbfahrtrichtungScreenshot,
+        thumbnailAlt: "Screenshot showing the DB Fahrtrichtung Firefox addon in action, showing the Deutsche Bahn website with the inserted link to the carriage routing",
         links: [
             {
                 url: "https://addons.mozilla.org/de/firefox/addon/db-fahrtrichtung/",
@@ -212,6 +216,7 @@ export const projects: Project[] = [
         description: "Designed and developed a portfolio website for the artist Andrea Gotti, on which he can dynamically upload and present his paintings and publications. Especially optimized for touch devices. No UI framework used, just pure CSS.",
         technologies: ["Typescript", "React"],
         thumbnail: andreagottiScreenshot,
+        thumbnailAlt: "Screenshot showing the landing page of the Andrea Gotti portfolio website, white website with a very clean and minimalistic design",
         links: [
             {
                 url: "https://andreagotti.art",

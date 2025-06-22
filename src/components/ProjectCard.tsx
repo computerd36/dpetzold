@@ -2,6 +2,7 @@ import { Button, Card, CardBody, CardFooter, CardHeader, Divider, Image } from '
 import { Project } from '../types';
 import { FaExternalLinkSquareAlt, FaFirefox, FaGithub, FaGlobeAmericas } from 'react-icons/fa';
 import { TechChip } from './TechChip';
+import { Link } from 'react-router-dom';
 
 export interface IProjectCardProps {
   project: Project;
@@ -24,14 +25,10 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
     }
   }
 
-  const openLink = (url: string) => {
-    window.open(url, '_blank');
-  }
-
   return (
     <Card className='w-full h-full'>
       <CardHeader>
-        <Image src={project.thumbnail} alt={"Image of " + project.title} className='rounded-md' />
+        <Image src={project.thumbnail} alt={project.thumbnailAlt} className='rounded-md' />
       </CardHeader>
       <Divider />
       <CardBody>
@@ -48,20 +45,19 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
         <div className='flex gap-2'>
           {project.links?.map((link, index) => (
             <Button
+              as={Link}
               key={index + link.url}
+              to={link.url}
+              target='_blank'
               variant='bordered'
               startContent={getIcon(link.type)}
-              onPress={() => openLink(link.url)}
-              aria-label={"Link to " + link.title}
               className='text-slate-900 dark:text-neutral-300'
             >
-              {link.title}
+              {link.title} <span className="sr-only">(opens in new tab)</span>
             </Button>
           ))}
         </div>
       </CardFooter>
-
     </Card>
   );
-
 }

@@ -24,6 +24,7 @@ export type Project = {
     description: string;
     technologies: string[];
     thumbnail: string;
+    thumbnailAlt: string;
     links?: {
         url: string;
         title: string;

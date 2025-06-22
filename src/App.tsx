@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { useLocalStorage } from 'usehooks-ts'
+import { Analytics } from '@vercel/analytics/react';
 
 // Pages
 import { PageLanding } from "./routes/PageLanding";
@@ -20,6 +21,7 @@ export default function App() {
     <main className={storedDarkMode ? 'dark' : 'light'}>
       <DarkModeSwitch />
       <DockComponent />
+      <Analytics />
 
       <Routes>
         <Route path="/" element={<PageLanding />} />

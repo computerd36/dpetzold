@@ -1,10 +1,20 @@
 import { useLocalStorage } from 'usehooks-ts'
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import { useMemo } from 'react';
 
 export function DarkModeSwitch() {
+    // system settings for dm
+    const systemPrefersDark = useMemo(
+        () =>
+            typeof window !== 'undefined' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches,
+        [],
+    );
 
-    const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', true);
+    // store and retrieve dark mode preference from ls
+    const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', systemPrefersDark);
 
+    // toogle mode
     const toggle = () => {
         setStoredDarkMode(!storedDarkMode);
     };
@@ -17,9 +27,9 @@ export function DarkModeSwitch() {
         >
             {
                 storedDarkMode ? (
-                    <MdLightMode className='text-slate-50 hover:scale-110 transition-all' />
+                    <MdLightMode className='text-slate-50 hover:scale-125 hover:rotate-90 transition-all' />
                 ) : (
-                    <MdDarkMode className='text-neutral-900 hover:scale-110 transition-all' />
+                    <MdDarkMode className='text-neutral-900 hover:scale-125 hover-rotate-90 transition-all' />
                 )
             }
         </button>
