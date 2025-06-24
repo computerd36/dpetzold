@@ -6,6 +6,7 @@ import rootrackScreenshot from "../assets/project-screenshots/rootrack-screensho
 import dbfahrtrichtungScreenshot from "../assets/project-screenshots/dbfahrtrichtung-screenshot.webp";
 import andreagottiScreenshot from "../assets/project-screenshots/andreagotti-screenshot.webp";
 import blattwerkScreenshot from "../assets/project-screenshots/blattwerk-screenshot.webp";
+import alertaiguaScreenshot from "../assets/project-screenshots/alertaigua-screenshot.webp";
 
 //Logo imports
 import capgeminiLogo from "../assets/logos/capgemini-logo.webp";
@@ -151,6 +152,21 @@ export const projects: Project[] = [
             {
                 url: "https://egenus.app",
                 title: "Webapp",
+                type: "app"
+            }
+        ]
+    },
+    {
+        title: "AlertAigua",
+        duration: "Apr 2025 - now",
+        description: "A customisable flood warning system that sends critical notifications to the mobile devices of residents in the Arens de Lledó community planned, developed and tested based on a similar alerting logic to that used in existing, proven systems.",
+        technologies: ["Typescript", "React", "Tailwind", "HeroUI", "Node", "Express", "Postgres", "Prisma", "Pushsafer"],
+        thumbnail: alertaiguaScreenshot,
+        thumbnailAlt: "AlertAigua web app landing page with map and alert settings",
+        links: [
+            {
+                url: "https://aa-fe-dev.up.railway.app/",
+                title: "Current prototype",
                 type: "app"
             }
         ]
