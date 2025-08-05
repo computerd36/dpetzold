@@ -44,6 +44,20 @@ const FloatingDockMobile = ({
     const [open, setOpen] = useState(false);
     return (
         <div className={cn("relative block md:hidden", className)}>
+            <button
+                onClick={() => setOpen(!open)}
+                className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/50 dark:bg-neutral-900 flex items-center justify-center border border-slate-600"
+                aria-expanded={open}
+                aria-label={`Toggle ${open ? "Close" : "Open"} Dock`}
+            >
+                {
+                    open ?
+                        <IconLayoutNavbarExpand className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
+                        :
+                        <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
+                }
+            </button>
+
             <AnimatePresence>
                 {open && (
                     <motion.div
@@ -72,7 +86,7 @@ const FloatingDockMobile = ({
                                     target={item.href.startsWith("http") ? "_blank" : "_self"}
                                     key={item.title}
                                     className="h-14 w-14 rounded-full bg-slate-50 dark:bg-neutral-900 flex items-center justify-center border border-slate-600"
-                                    aria-label={`Link to ${item.title}`}
+                                    aria-label={`Link to ${item.title} ${item.href.startsWith("http") && "(opens in new tab)"}`}
                                 >
                                     <div className="h-8 w-8">{item.icon}</div>
                                 </Link>
@@ -81,18 +95,6 @@ const FloatingDockMobile = ({
                     </motion.div>
                 )}
             </AnimatePresence>
-            <button
-                onClick={() => setOpen(!open)}
-                className="h-14 w-14 rounded-full backdrop-blur-sm bg-white/50 dark:bg-neutral-900 flex items-center justify-center border border-slate-600"
-                aria-label="Open Dock"
-            >
-                {
-                    open ?
-                        <IconLayoutNavbarExpand className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
-                        :
-                        <IconLayoutNavbarCollapse className="h-8 w-8 text-slate-900 dark:text-neutral-400" />
-                }
-            </button>
         </div >
     );
 };
@@ -178,7 +180,7 @@ function IconContainer({
         <Link
             to={href}
             target={href.startsWith("http") ? "_blank" : "_self"}
-            aria-label={`Link to ${title}`}
+            aria-label={`Link to ${title} ${href.startsWith("http") && "(opens in new tab)"}`}
         >
             <motion.div
                 ref={ref}

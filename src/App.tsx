@@ -16,9 +16,8 @@ export default function App() {
 
   const [storedDarkMode] = useLocalStorage('darkMode', true);
 
-
   return (
-    <main className={storedDarkMode ? 'dark' : 'light'}>
+    <main className={`${storedDarkMode ? 'dark' : 'light'}`}>
       <DarkModeSwitch />
       <DockComponent />
       <Analytics />

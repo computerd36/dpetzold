@@ -21,3 +21,8 @@ body {
 .dark body {
   background-color: #1a202c;
 }
+
+/* this makes the transition between light and dark mode smooth, just ignore the css syntax error */
+body * {
+  @apply transition-colors duration-500;
+}
